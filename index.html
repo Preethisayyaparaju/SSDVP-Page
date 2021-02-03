@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login and Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+               <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()" >Login</button>  
+                <button type="button" class="toggle-btn" onclick="Register()">Register</button>  
+            </div>  
+            <div class="social-icons">
+            <img src="fb.jpg">
+            <img src="twitter.jpg">
+            <img src="instagram.jpg">
+            <img src="telegram.jpg">
+        </div>
+        <form id="Login" class="input-group">
+           <input type="email" class="input-field" placeholder="Email" required><br/>
+            <input type="password"  class="input-field" placeholder="Password"id="password" name="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"title=" should have minumum 8 characters and a special character and atleast one capital letter and lower case letter and digits"   required />
+            <p style="color:red;">Forgot Password?</p><br/>
+            <input type="submit"value="Login" class="submit-btn" onclick="loginform() "><br/>
+        </form>
+        <form id="Register" class="input-group" onsubmit="validateForm">
+           <input type="text" class="input-field" placeholder="Firstname" required>
+           <input type="text" class="input-field" placeholder="Lastname" required>
+           <input type="email" class="input-field" placeholder="email"required>
+            <input type="password"  class="input-field" placeholder="password"id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"title=" should have minumum 8 characters and a special character and atleast one capital letter and lower case letter and digits" required />
+            <input type="checkbox"class="check-box"><span>Remeber Password</span>
+            <input type="submit" value="Register" class="submit-btn"  onclick="validateForm()">
+        </form>
+        
+        </div>
+    </div>
+    
+    <script>
+        var x=document.getElementById("Login");
+        var y=document.getElementById("Register");
+        var z=document.getElementById("btn");
+        function Register(){
+            x.style.left= "500px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+        function Login(){
+            x.style.left= "50px";
+            y.style.left="450px";
+            z.style.left="0";
+                          
+        }
+    
+    </script>
+    <script  type="text/javascript"  src="script.js"></script>
+     
+</body>
+
+</html>
